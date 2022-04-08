@@ -46,9 +46,18 @@ public class GamePanel extends JPanel implements ActionListener {
 
     public void drawer(Graphics g) {
 
+        for (int i=0; i < SCREE_HEIGHT/UNIT_SIZE; i++) {
+            g.drawLine(i*UNIT_SIZE, 0, i*UNIT_SIZE, SCREE_HEIGHT);
+            g.drawLine(0, i*UNIT_SIZE, i*SCREE_WIDTH, i*UNIT_SIZE);
+        };
+        g.setColor(Color.red);
+        g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
+
     };
 
     public void newApple() {
+        appleX = random.nextInt((int)(SCREE_WIDTH/UNIT_SIZE))*UNIT_SIZE;
+        appleY = random.nextInt((int)(SCREE_HEIGHT/UNIT_SIZE))*UNIT_SIZE;
 
     }
 
