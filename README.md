@@ -1,7 +1,7 @@
 # Project Snake
 
 ## demo
-![Demo](./assets/snake.gif)
+![Demo](./src/assets/snake.gif)
 
 ### Contruido com Java
 
